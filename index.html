@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>learning vue</title>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <img
+      v-bind:src="picture"
+      :alt="`${firstName} ${lastName}`"
+      :class="gender"
+    />
+    <h1>{{firstName}} {{lastName}}</h1>
+    <h3>Email: {{email}}</h3>
+    <button :class="gender" @click="getUser()">Get Random User</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
